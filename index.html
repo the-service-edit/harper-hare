@@ -626,10 +626,11 @@
   }
   .reveal.in { opacity: 1; transform: translateY(0); }
   .reveal-img {
-    clip-path: inset(0 0 100% 0);
-    transition: clip-path 1.4s var(--easing);
+    /* Always visible; .in class adds a soft fade for browsers where the observer fires */
+    opacity: 1;
   }
-  .reveal-img.in { clip-path: inset(0 0 0 0); }
+  .reveal-img img { opacity: 1; }
+  .reveal-img.in { opacity: 1; }
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
