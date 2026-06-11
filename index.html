@@ -402,37 +402,43 @@
     padding: 80px 56px;
     position: relative;
   }
+  .stage-corner {
+    position: absolute;
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--chocolate);
+  }
+  .stage-corner.tl { top: 32px; left: 56px; }
+  .stage-corner.tr { top: 32px; right: 56px; }
+  .stage-corner.bl { bottom: 32px; left: 56px; }
+  .stage-corner.br { bottom: 32px; right: 56px; }
+
   .cards-grid {
-    max-width: 1180px;
+    max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1.2fr 1fr;
-    gap: 32px;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: 36px;
     align-items: center;
-    min-height: 460px;
   }
   .cards-side {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    align-items: center;
   }
-  .cards-side.left { align-items: flex-start; }
-  .cards-side.right { align-items: flex-end; }
 
   .thumb {
     position: relative;
     background: var(--warm-white);
     border: 1px solid var(--hairline);
     padding: 6px;
-    width: 78%;
+    width: 130px;
+    margin: 0;
     transition: transform 0.5s var(--easing);
   }
-  .cards-side.left .thumb:nth-child(1) { margin-left: 0; }
-  .cards-side.left .thumb:nth-child(2) { margin-left: 18%; }
-  .cards-side.left .thumb:nth-child(3) { margin-left: 4%; }
-  .cards-side.right .thumb:nth-child(1) { margin-right: 0; }
-  .cards-side.right .thumb:nth-child(2) { margin-right: 18%; }
-  .cards-side.right .thumb:nth-child(3) { margin-right: 4%; }
   .thumb:hover { transform: translateY(-3px); }
   .thumb .img-wrap {
     aspect-ratio: 4 / 5;
@@ -460,6 +466,7 @@
     background: var(--warm-white);
     border: 1px solid var(--hairline);
     padding: 8px;
+    width: 280px;
   }
   .card-main .img-wrap {
     aspect-ratio: 4 / 5.4;
@@ -692,14 +699,15 @@
     .async { grid-template-columns: 1fr; gap: 32px; }
     .async .side { padding-bottom: 0; }
 
-    .cards-stage { padding: 56px 20px; }
-    .cards-grid { grid-template-columns: 1fr; gap: 16px; min-height: 0; }
-    .cards-side.left, .cards-side.right { align-items: stretch; }
-    .thumb, .cards-side .thumb:nth-child(n) {
-      width: 100% !important;
-      margin: 0 !important;
-    }
-    .thumb .img-wrap { aspect-ratio: 5 / 4; }
+    .cards-stage { padding: 64px 20px 80px; }
+    .stage-corner.tl, .stage-corner.tr { top: 20px; }
+    .stage-corner.bl, .stage-corner.br { bottom: 20px; }
+    .stage-corner.tl, .stage-corner.bl { left: 20px; }
+    .stage-corner.tr, .stage-corner.br { right: 20px; }
+    .cards-grid { grid-template-columns: 1fr; gap: 20px; justify-content: stretch; }
+    .cards-side { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .thumb { width: 100%; }
+    .card-main { width: 100%; max-width: 280px; margin: 0 auto; }
 
     .services-3 { grid-template-columns: 1fr; gap: 40px; }
 
@@ -828,45 +836,43 @@
   </div>
 </section>
 
-<!-- SECTION — Floating cards (3 left · 1 center · 3 right) -->
+<!-- SECTION — Stylists (2 thumbs · 1 main · 2 thumbs) -->
 <section class="cards-stage" id="stylists">
+  <span class="stage-corner tl">Stylists</span>
+  <span class="stage-corner tr">01 / 05</span>
+
   <div class="cards-grid">
     <div class="cards-side left">
-      <div class="thumb reveal">
-        <span class="tag tl">Cut</span>
+      <div class="thumb">
+        <span class="tag tl">Senior</span>
         <div class="img-wrap"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=500&q=85&auto=format&fit=crop" alt="" /></div>
       </div>
-      <div class="thumb reveal">
-        <span class="tag tl">Colour</span>
+      <div class="thumb">
+        <span class="tag tl">Senior</span>
         <div class="img-wrap"><img src="https://images.unsplash.com/photo-1554519515-242161756769?w=500&q=85&auto=format&fit=crop" alt="" /></div>
-      </div>
-      <div class="thumb reveal">
-        <span class="tag tl">Studio</span>
-        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=500&q=85&auto=format&fit=crop" alt="" /></div>
       </div>
     </div>
 
-    <div class="card-main reveal">
+    <div class="card-main">
       <span class="tag tl">Founder</span>
       <div class="img-wrap"><img src="https://images.unsplash.com/photo-1521146764736-56c929d59c83?w=900&q=85&auto=format&fit=crop" alt="Harper Wren" /></div>
       <span class="tag br">Harper Wren</span>
     </div>
 
     <div class="cards-side right">
-      <div class="thumb reveal">
+      <div class="thumb">
         <span class="tag tl">Stylist</span>
         <div class="img-wrap"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=500&q=85&auto=format&fit=crop" alt="" /></div>
       </div>
-      <div class="thumb reveal">
-        <span class="tag tl">Stylist</span>
-        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=500&q=85&auto=format&fit=crop" alt="" /></div>
-      </div>
-      <div class="thumb reveal">
-        <span class="tag tl">Detail</span>
-        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1605980776566-0486c3ac7617?w=500&q=85&auto=format&fit=crop" alt="" /></div>
+      <div class="thumb">
+        <span class="tag tl">Studio</span>
+        <div class="img-wrap"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=500&q=85&auto=format&fit=crop" alt="" /></div>
       </div>
     </div>
   </div>
+
+  <span class="stage-corner bl">Murwillumbah</span>
+  <span class="stage-corner br">By appointment</span>
 </section>
 
 <!-- SECTION — 3 service tiles -->
