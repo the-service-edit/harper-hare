@@ -435,7 +435,7 @@
   .stage-corner.br { bottom: 32px; right: 56px; }
 
   .cards-grid {
-    max-width: 1100px;
+    max-width: 1280px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -446,7 +446,7 @@
   .cards-side {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
+    gap: 18px;
     align-items: center;
   }
 
@@ -454,8 +454,8 @@
     position: relative;
     background: var(--warm-white);
     border: 1px solid var(--hairline);
-    padding: 6px;
-    width: 130px;
+    padding: 8px;
+    width: 180px;
     margin: 0;
     transition: transform 0.5s var(--easing);
   }
@@ -467,26 +467,13 @@
   .thumb .img-wrap img {
     width: 100%; height: 100%; object-fit: cover;
   }
-  .thumb .tag {
-    position: absolute;
-    font-size: 8px;
-    text-transform: uppercase;
-    letter-spacing: 0.28em;
-    background: var(--warm-white);
-    padding: 5px 8px;
-    color: var(--taupe);
-    z-index: 2;
-    border: 1px solid var(--hairline);
-  }
-  .thumb .tag.tl { top: -1px; left: -1px; }
-  .thumb .tag.br { bottom: -1px; right: -1px; color: var(--chocolate); }
 
   .card-main {
     position: relative;
     background: var(--warm-white);
     border: 1px solid var(--hairline);
-    padding: 8px;
-    width: 280px;
+    padding: 10px;
+    width: 360px;
   }
   .card-main .img-wrap {
     aspect-ratio: 4 / 5.4;
@@ -864,28 +851,22 @@
   <div class="cards-grid">
     <div class="cards-side left">
       <div class="thumb">
-        <span class="tag tl">Senior</span>
         <div class="img-wrap"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=500&q=85&auto=format&fit=crop" alt="" /></div>
       </div>
       <div class="thumb">
-        <span class="tag tl">Senior</span>
         <div class="img-wrap"><img src="https://images.unsplash.com/photo-1554519515-242161756769?w=500&q=85&auto=format&fit=crop" alt="" /></div>
       </div>
     </div>
 
     <div class="card-main">
-      <span class="tag tl">Founder</span>
       <div class="img-wrap"><img src="https://images.unsplash.com/photo-1521146764736-56c929d59c83?w=900&q=85&auto=format&fit=crop" alt="Harper Wren" /></div>
-      <span class="tag br">Harper Wren</span>
     </div>
 
     <div class="cards-side right">
       <div class="thumb">
-        <span class="tag tl">Stylist</span>
         <div class="img-wrap"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=500&q=85&auto=format&fit=crop" alt="" /></div>
       </div>
       <div class="thumb">
-        <span class="tag tl">Studio</span>
         <div class="img-wrap"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=500&q=85&auto=format&fit=crop" alt="" /></div>
       </div>
     </div>
