@@ -196,11 +196,14 @@
   .section.bg-sand { background: var(--sand); }
   .section.bg-stone { background: var(--stone); }
 
+  .editorial-intro {
+    margin-bottom: 80px;
+  }
   .editorial-intro .eyebrow { display: block; margin-bottom: 28px; }
   .editorial-intro h1 {
     font-size: clamp(36px, 4.4vw, 56px);
     max-width: 14ch;
-    margin-bottom: 36px;
+    margin-bottom: 0;
   }
   .editorial-intro h1 em { font-style: italic; }
   .editorial-intro p {
@@ -215,8 +218,8 @@
      ================================================ */
   .pair-3col {
     display: grid;
-    grid-template-columns: 1fr 1.4fr 0.8fr;
-    gap: 56px;
+    grid-template-columns: 1fr 1.7fr 0.9fr;
+    gap: 48px;
     align-items: start;
   }
   .pair-3col .text-col {
@@ -241,7 +244,7 @@
   .pair-3col .small {
     aspect-ratio: 4 / 5;
     overflow: hidden;
-    margin-top: 40px;
+    margin-top: 80px;
   }
   .pair-3col .small img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s var(--easing); }
   .pair-3col .small:hover img { transform: scale(1.03); }
@@ -735,29 +738,23 @@
   <img src="images/hero.jpg" alt="Editorial salon detail" loading="eager" />
 </section>
 
-<!-- SECTION — Editorial intro -->
+<!-- SECTION — Editorial intro + 3-col pair -->
 <section class="section" id="studio">
   <div class="container">
     <div class="editorial-intro">
-      <span class="eyebrow reveal">Editorial section</span>
-      <h1 class="display reveal">The art of considered, <em>unhurried</em> hair, made just for you.</h1>
-      <p class="reveal">Harper &amp; The Hare is a quiet boutique studio in Murwillumbah, in the Tweed Valley of Northern NSW. Founded by Harper Wren after a decade behind chairs in Melbourne and London, the studio is built for considered colour and the kind of slow morning you do not get in a city salon.</p>
+      <span class="eyebrow muted reveal">Editorial section</span>
+      <h1 class="display reveal">The art of considered, <em>unhurried</em> hair.</h1>
     </div>
-  </div>
-</section>
 
-<!-- SECTION — Text column + tall image + small image -->
-<section class="section tight">
-  <div class="container">
     <div class="pair-3col">
       <div class="text-col">
         <div class="text-block reveal">
           <span class="eyebrow">Who we are</span>
-          <p>A studio of three senior stylists working slowly, by hand, with the kind of close attention that has gone out of most rooms. Walk-ins are by appointment only.</p>
+          <p>Harper &amp; The Hare is a quiet boutique studio in Murwillumbah, founded by Harper Wren after a decade behind chairs in Melbourne and London. Three senior stylists, one room, by appointment only.</p>
         </div>
         <div class="text-block reveal">
           <span class="eyebrow">Why we exist</span>
-          <p>We started Harper &amp; The Hare because we wanted a room where the colour, the cut, and the conversation could all take as long as they needed. Nothing rushed, nothing performed.</p>
+          <p>We wanted a room where the colour, the cut, and the conversation could all take as long as they needed. Nothing rushed, nothing performed.</p>
         </div>
       </div>
       <div class="tall reveal-img">
